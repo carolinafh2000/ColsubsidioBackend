@@ -12,7 +12,7 @@ spring:
     driver-class-name: org.h2.Driver
     jdbcUrl: jdbc:h2:mem:pruebadb;MODE=MySQL;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=FALSE;CASE_INSENSITIVE_IDENTIFIERS=TRUE
     username: userdb
-    password: 123456
+    password: Pru3b4C0l5ub51d10
     hikari:
       poolName: pool
   h2:
