@@ -2,6 +2,7 @@ package com.prueba.demo.Model.Repository;
 
 import com.prueba.demo.Model.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.Optional;
 

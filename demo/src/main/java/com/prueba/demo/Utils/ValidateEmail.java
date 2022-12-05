@@ -4,21 +4,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidateEmail {
-
+ /**     "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"       **/
     public static boolean validacion(String email) {
-
+        boolean validate = false;
         // Patrón para validar el email
         Pattern pattern = Pattern
-                .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+                .compile("(\\W|^)[\\w.\\-]{0,25}@(colsubsidio)\\.com(\\W|$)");
 
         Matcher mather = pattern.matcher(email);
 
         if (mather.find() == true) {
-            System.out.println("El email ingresado es válido.");
+            validate = true;
         } else {
-            System.out.println("El email ingresado es inválido.");
+            validate = false;
         }
-        return false;
+        return validate;
     }
 }

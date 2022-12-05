@@ -6,18 +6,18 @@ import java.util.regex.Pattern;
 public class ValidatePassword {
 
     public static boolean validacion(String email) {
+        boolean validate = false;
 
-        // Patrón para validar el email
         Pattern pattern = Pattern
                 .compile("^(?=.*\\d)(?=.*[\\u0021-\\u002b\\u003c-\\u0040])(?=.*[A-Z])(?=.*[a-z])\\S{8,16}$");
 
         Matcher mather = pattern.matcher(email);
 
         if (mather.find() == true) {
-            System.out.println("la password ingresado es válido.");
+            validate = true;
         } else {
-            System.out.println("la password ingresado es inválido.");
+            validate = false;
         }
-        return false;
+        return validate;
     }
 }

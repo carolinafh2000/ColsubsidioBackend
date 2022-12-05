@@ -34,6 +34,6 @@ public class User {
         this.password = password;
         this.phones = phones;
     }
-    //private String lastlogin;
+    private Date lastlogin;
 
 }
